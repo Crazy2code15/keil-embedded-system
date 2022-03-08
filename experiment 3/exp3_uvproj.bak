@@ -390,13 +390,6 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
-          <Files>
-            <File>
-              <FileName>exp3aii.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\exp3aii.asm</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>

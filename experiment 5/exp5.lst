@@ -1,0 +1,53 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         MAIN
+    4 00000000 E3A0000A        MOV              R0, #10
+    5 00000004 E3A01A01        LDR              R1, =0x00001000
+    6 00000008         LOOP
+    7 00000008 E4D12001        LDRB             R2, [R1], #1
+    8 0000000C E35200AC        CMP              R2, #0xAC
+    9 00000010 02833001        ADDEQ            R3,R3,#1
+   10 00000014 E2500001        SUBS             R0,R0,#1
+   11 00000018 1AFFFFFA        BNE              LOOP
+   12 0000001C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=exp5.d -oexp5.o -IC
+:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --l
+ist=exp5.lst exp5.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000008
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file exp5.asm
+   Uses
+      At line 11 in file exp5.asm
+Comment: LOOP used once
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 3 in file exp5.asm
+   Uses
+      None
+Comment: MAIN unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file exp5.asm
+   Uses
+      None
+Comment: PROGRAM unused
+3 symbols
+334 symbols in table

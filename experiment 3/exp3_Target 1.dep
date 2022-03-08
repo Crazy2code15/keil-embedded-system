@@ -1,2 +1,2 @@
 Dependencies for Project 'exp3', Target 'Target 1': (DO NOT MODIFY !)
-F (.\exp3b.asm)(0x621CA59B)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include --list "exp3b.lst" --xref -o "exp3b.o" --depend "exp3b.d")
+F (.\exp3b.asm)(0x6227545A)(--cpu ARM7TDMI --bi --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include --list "exp3b.lst" --xref -o "exp3b.o" --depend "exp3b.d")
