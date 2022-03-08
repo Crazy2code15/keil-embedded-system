@@ -1,0 +1,18 @@
+ AREA PROGRAM,CODE, READONLY
+ ENTRY
+MAIN
+    LDR R0, =0x00000000
+    LDR R1, =0x00000020
+    MOV R3, #9
+    LDR R4, [R0]
+
+LOOP ADD R0, R0, #4
+    LDR R5, [R0]
+    ADDS R4,R4,R5
+    ADCS R7,R7,#1
+    SUBS R3,R3,#1
+    BNE LOOP
+    
+	STR R4, [R1], #4
+    STR R7, [R1]
+    END 

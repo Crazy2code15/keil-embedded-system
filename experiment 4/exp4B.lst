@@ -1,0 +1,60 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         MAIN
+    4 00000000 E3A00000        LDR              R0, =0x00000000
+    5 00000004 E3A01020        LDR              R1, =0x00000020
+    6 00000008 E3A03009        MOV              R3, #9
+    7 0000000C E5904000        LDR              R4, [R0]
+    8 00000010         
+    9 00000010 E2800004 
+                       LOOP    ADD              R0, R0, #4
+   10 00000014 E5905000        LDR              R5, [R0]
+   11 00000018 E0944005        ADDS             R4,R4,R5
+   12 0000001C E2B77001        ADCS             R7,R7,#1
+   13 00000020 E2533001        SUBS             R3,R3,#1
+   14 00000024 1AFFFFF9        BNE              LOOP
+   15 00000028         
+   16 00000028 E4814004        STR              R4, [R1], #4
+   17 0000002C E5817000        STR              R7, [R1]
+   18 00000030                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=EXP4B.d -oEXP4B.o -
+IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" -
+-list=EXP4B.lst EXP4B.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 9 in file EXP4B.asm
+   Uses
+      At line 14 in file EXP4B.asm
+Comment: LOOP used once
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 3 in file EXP4B.asm
+   Uses
+      None
+Comment: MAIN unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file EXP4B.asm
+   Uses
+      None
+Comment: PROGRAM unused
+3 symbols
+334 symbols in table

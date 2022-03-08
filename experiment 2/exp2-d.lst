@@ -1,0 +1,44 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         MAIN
+    4 00000000 E3A00106        LDR              R0, =0x80000001 ;LOAD VALUE WIT
+                                                            H MSB 1 TO R0 REGIS
+                                                            TER
+    5 00000004 E3A01003        LDR              R1, =0x00000003 ;LOAD VALUE 4 T
+                                                            O R1 REGISTER
+    6 00000008 E1A02150        MOV              R2,R0,ASR R1 ;R2 WILL BE R0 SHI
+                                                            FTED RIGHT 3 TIMES
+    7 0000000C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=exp2-d.d -oexp2-d.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=exp2-d.lst exp2-d.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 3 in file exp2-d.asm
+   Uses
+      None
+Comment: MAIN unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file exp2-d.asm
+   Uses
+      None
+Comment: PROGRAM unused
+2 symbols
+333 symbols in table

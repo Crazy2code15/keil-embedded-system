@@ -1,0 +1,42 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         MAIN
+    4 00000000 E3A00A01        LDR              R0,=0X00001000
+    5 00000004 E59F1004        LDR              R1,=0X00001020
+    6 00000008 E930003C        LDMDB            R0!,{R2-R5}
+    7 0000000C E921003C        STMDB            R1!,{R2-R5}
+    8 00000010                 END
+              00001020 
+Command Line: --debug --xref --bi --apcs=interwork --depend=exp3ai.d -oexp3ai.o
+ -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1"
+ --list=exp3ai.lst exp3ai.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 3 in file exp3ai.asm
+   Uses
+      None
+Comment: MAIN unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file exp3ai.asm
+   Uses
+      None
+Comment: PROGRAM unused
+2 symbols
+335 symbols in table
