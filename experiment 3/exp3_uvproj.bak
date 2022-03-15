@@ -390,6 +390,13 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
+          <Files>
+            <File>
+              <FileName>exp3b.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\exp3b.asm</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
