@@ -8,21 +8,24 @@ ARM Macro Assembler    Page 1
     2 00000000                 ENTRY
     3 00000000         MAIN
     4 00000000 E3A00A01        LDR              R0, =0X00001000
-    5 00000004 E59F1020        LDR              R1, =0X00001004
-    6 00000008 E59F4020        LDR              R4, =0X00001008
-    7 0000000C E5902000        LDR              R2, [R0]
-    8 00000010 E5913000        LDR              R3, [R1]
-    9 00000014         LOOP
-   10 00000014 E0422003        SUB              R2, R2, R3
-   11 00000018 E2855001        ADD              R5,R5,#1
-   12 0000001C E1520003        CMP              R2,R3
-   13 00000020 AAFFFFFB        BGE              LOOP
-   14 00000024 E5845000        STR              R5, [R4]
-   15 00000028 EAFFFFFE 
+    5 00000004 E59F1028        LDR              R1, =0X00001004
+    6 00000008 E59F4028        LDR              R4, =0X00001008
+    7 0000000C E59F6028        LDR              R6, =0x0000100C
+    8 00000010 E5902000        LDR              R2, [R0]
+    9 00000014 E5913000        LDR              R3, [R1]
+   10 00000018         LOOP
+   11 00000018 E0422003        SUB              R2, R2, R3
+   12 0000001C E2855001        ADD              R5,R5,#1
+   13 00000020 E1520003        CMP              R2,R3
+   14 00000024 AAFFFFFB        BGE              LOOP
+   15 00000028 E5845000        STR              R5, [R4]
+   16 0000002C E5862000        STR              R2, [R6]
+   17 00000030 EAFFFFFE 
                        LOOP1   B                LOOP1
-   16 0000002C                 END
+   18 00000034                 END
               00001004 
               00001008 
+              0000100C 
 Command Line: --debug --xref --bi --apcs=interwork --depend=EXP8.d -oEXP8.o -IC
 :\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --l
 ist=EXP8.lst EXP8.asm
@@ -32,21 +35,21 @@ ist=EXP8.lst EXP8.asm
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
-LOOP 00000014
+LOOP 00000018
 
 Symbol: LOOP
    Definitions
-      At line 9 in file EXP8.asm
+      At line 10 in file EXP8.asm
    Uses
-      At line 13 in file EXP8.asm
+      At line 14 in file EXP8.asm
 Comment: LOOP used once
-LOOP1 00000028
+LOOP1 00000030
 
 Symbol: LOOP1
    Definitions
-      At line 15 in file EXP8.asm
+      At line 17 in file EXP8.asm
    Uses
-      At line 15 in file EXP8.asm
+      At line 17 in file EXP8.asm
 Comment: LOOP1 used once
 MAIN 00000000
 
