@@ -44,7 +44,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>exp8</OutputName>
+          <OutputName>exam</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -390,6 +390,13 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
+          <Files>
+            <File>
+              <FileName>exam.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\exam.asm</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
