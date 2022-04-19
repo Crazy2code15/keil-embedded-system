@@ -1,0 +1,71 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         MAIN
+    4 00000000 E3A00009        MOV              R0, #9
+    5 00000004 E3A01A01 
+                       LOOP1   LDR              R1, =0X00001000
+    6 00000008 E2812001        ADD              R2, R1, #1
+    7 0000000C E1A03000        MOV              R3, R0
+    8 00000010         
+    9 00000010 E5D14000 
+                       LOOP2   LDRB             R4, [R1]
+   10 00000014 E5D25000        LDRB             R5, [R2]
+   11 00000018 E1540005        CMP              R4, R5
+   12 0000001C 35C24000        STRCCB           R4, [R2]
+   13 00000020 35C15000        STRCCB           R5, [R1]
+   14 00000024 E2811001        ADD              R1, R1, #1
+   15 00000028 E2822001        ADD              R2, R2, #1
+   16 0000002C E2533001        SUBS             R3, R3, #1
+   17 00000030 1AFFFFF6        BNE              LOOP2
+   18 00000034 E2500001        SUBS             R0, R0, #1
+   19 00000038 1AFFFFF1        BNE              LOOP1
+   20 0000003C                 END
+Command Line: --debug --xref --bi --apcs=interwork --depend=exp9_descending.d -
+oexp9_descending.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefi
+ne="__EVAL SETA 1" --list=exp9_descending.lst exp9_descending.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP1 00000004
+
+Symbol: LOOP1
+   Definitions
+      At line 5 in file exp9_descending.asm
+   Uses
+      At line 19 in file exp9_descending.asm
+Comment: LOOP1 used once
+LOOP2 00000010
+
+Symbol: LOOP2
+   Definitions
+      At line 9 in file exp9_descending.asm
+   Uses
+      At line 17 in file exp9_descending.asm
+Comment: LOOP2 used once
+MAIN 00000000
+
+Symbol: MAIN
+   Definitions
+      At line 3 in file exp9_descending.asm
+   Uses
+      None
+Comment: MAIN unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file exp9_descending.asm
+   Uses
+      None
+Comment: PROGRAM unused
+4 symbols
+335 symbols in table
