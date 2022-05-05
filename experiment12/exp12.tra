@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'exp12.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"exp12.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "exp12.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x00000000 --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\exp12.map" -o exp12.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'exp12.axf'
+### ADS-LD Command File: 'exp12.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'exp12.lnp', Handle=0x00000C7C
+### Writing '.lnp' file
+### ADS-LD Command file 'exp12.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
